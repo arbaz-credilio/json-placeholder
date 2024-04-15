@@ -38,3 +38,17 @@ export const createUser = async (): Promise<void> => {
   let json = await res.json();
   console.log(`user is created: `, json);
 };
+
+export const updateUser = async (id: string): Promise<void> => {
+  let res = await fetch(
+    `https://jsonplaceholder.typicode.com/users/${id}`,
+    {
+      method: "PUT",
+      headers: {
+        "Content-type": "application/json",
+      },
+    }
+  );
+  let json = await res.json();
+  console.log(`user is updated: `, json);
+};
