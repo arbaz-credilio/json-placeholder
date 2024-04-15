@@ -18,7 +18,7 @@
 </template>
 
 <script setup lang="ts">
-import { type z } from "zod";
+import type { z } from "zod";
 import type { FormSubmitEvent } from "~/node_modules/@nuxt/ui/dist/runtime/types/form";
 import { Validation } from "~/schemas/RegisterSchemas";
 const snackbar = useSnackbar();
