@@ -4,4 +4,5 @@ export default defineAppConfig({
       dynamic: true,
     },
   },
+  nuxtIcon: {}
 });
