@@ -5,10 +5,13 @@ export default defineNuxtConfig({
   typescript: {
     typeCheck: true,
   },
-  modules: ['@nuxt/ui', 'nuxt-snackbar'],
+  modules: ["@nuxt/ui", "nuxt-snackbar"],
   snackbar: {
     bottom: true,
     right: true,
-    duration: 2000
-  }
+    duration: 2000,
+  },
+  colorMode: {
+    preference: "light",
+  },
 });

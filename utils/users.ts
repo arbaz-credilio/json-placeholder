@@ -39,7 +39,7 @@ export const createUser = async (): Promise<void> => {
   console.log(`user is created: `, json);
 };
 
-export const updateUser = async (id: string): Promise<void> => {
+export const updateUserCall = async (id: string | String[]): Promise<void> => {
   let res = await fetch(
     `https://jsonplaceholder.typicode.com/users/${id}`,
     {

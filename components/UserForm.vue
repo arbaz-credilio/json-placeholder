@@ -1,18 +1,18 @@
 <template>
-  <UForm :schema="Validation" :state="state" @submit="hanldeForm">
-    <UFormGroup name="name" label="name">
-      <UInput type="text" v-model="state.name" />
+  <UForm :schema="Validation" :state="state" @submit="hanldeForm" >
+    <UFormGroup name="name" label="Name">
+      <UInput type="text" v-model="state.name"/>
     </UFormGroup>
-    <UFormGroup name="email" label="email">
-      <UInput type="email" v-model="state.email" />
+    <UFormGroup name="email" label="Email">
+      <UInput type="email" v-model="state.email"/>
     </UFormGroup>
-    <UFormGroup name="phone" label="phone">
-      <UInput type="text" v-model="state.phone" />
+    <UFormGroup name="phone" label="Phone No.">
+      <UInput type="text" v-model="state.phone"/>
     </UFormGroup>
-    <UFormGroup name="city" label="city">
-      <UInput type="text" v-model="state.address.city" />
+    <UFormGroup name="city" label="City">
+      <UInput type="text" v-model="state.address.city"/>
     </UFormGroup>
-    <UButton type="submit">Submit</UButton>
+    <UButton type="submit" class="w-full mt-4 justify-center">Submit</UButton>
   </UForm>
   <NuxtSnackbar />
 </template>
@@ -50,5 +50,7 @@ const hanldeForm = (event: FormSubmitEvent<z.output<typeof Validation>>) => {
     phone: "",
     address: { city: "" },
   };
+  const formOpen = useState("isFormOpen")
+  formOpen.value = false;
 };
 </script>
